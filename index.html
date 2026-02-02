@@ -369,7 +369,7 @@
 
         .scroll-indicator {
             position: absolute;
-            bottom: 3rem;
+            bottom: 1rem;
             left: 50%;
             transform: translateX(-50%);
             animation: bounce 2s infinite;
@@ -845,21 +845,28 @@
             border-top: 1.5px solid var(--border-light);
         }
 
-        .author-photo {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--gold);
-            background: var(--beige);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: var(--forest-deep);
-            font-weight: 600;
-            font-family: 'Cormorant Garamond', serif;
-        }
+.author-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+    background: var(--beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--forest-deep);
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.author-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
         .author-info {
             flex: 1;
@@ -1399,7 +1406,7 @@
                 <div class="service-card fade-in">
                     <div class="service-header">
                         <span class="service-icon">✍️</span>
-                        <h3 class="service-title">À LA CARTE SERVICES</h3>
+                        <h3 class="service-title">Tailored content services</h3>
                     </div>
                     <p class="service-description" style="margin-bottom: 2.5rem;">
                         Choose exactly what you need. Mix and match platforms and content types to build your perfect package.
@@ -1602,7 +1609,9 @@
                         You are such a wonderful writer. Your dedication towards your craft is evident in every line, every para. You have poured your heart and soul into your writing. I got so much appreciation in my speeches in which I received your help, I'm really thankful for that. I look forward to witness your extraordinary writing in future.
                     </p>
                     <div class="testimonial-author">
-                        <div class="author-photo">DS</div>
+                        <div class="author-photo">
+<img src="snehlata_singh.png" alt="">
+                        </div>
                         <div class="author-info">
                             <div class="author-name">Dr. Snehlata Singh</div>
                             <div class="author-title">Anesthesiologist</div>
@@ -1611,12 +1620,15 @@
                 </div>
 
                 <div class="testimonial-card fade-in">
-                    <div class="quote-icon">"</div>
+                        <div class="quote-icon">"</div>
+                 
                     <p class="testimonial-text">
                         Divya ji is a highly skilled and dedicated content creator. She worked on my lead magnet content with great clarity, creativity, and professionalism. I appreciate her commitment and would gladly recommend her to anyone looking for quality content creation.
                     </p>
                     <div class="testimonial-author">
-                        <div class="author-photo">RK</div>
+                        <div class="author-photo">
+                            <img src="yogacharya_rajeev_kumar.png" alt="">
+                        </div>
                         <div class="author-info">
                             <div class="author-name">Yogacharya Rajeev Kumar</div>
                             <div class="author-title">Yoga Teacher & Wellness Expert</div>
