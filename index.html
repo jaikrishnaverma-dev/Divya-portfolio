@@ -185,6 +185,15 @@
         .prices>div{
             max-width: 85%;
         }
+
+        .clickable-card {
+            cursor: pointer;
+        }
+
+        .clickable-card:hover {
+            transform: translateX(6px);
+        }
+
         @media (max-width: 768px) {
             body {
                 padding-top: 70px;
@@ -1695,7 +1704,7 @@
               <div class="contact-methods-professional">
 
     <!-- Email -->
-    <div class="contact-method-pro fade-in">
+    <div class="contact-method-pro fade-in clickable-card" data-link="mailto:divyasbisen45@gmail.com">
         <div class="method-icon-wrapper">
             <div class="contact-icon">📧</div>
         </div>
@@ -1711,7 +1720,7 @@
     </div>
 
     <!-- LinkedIn -->
-    <div class="contact-method-pro fade-in">
+    <div class="contact-method-pro fade-in clickable-card" data-link="https://www.linkedin.com/in/divya-s-bisen">
         <div class="method-icon-wrapper">
             <div class="contact-icon">💼</div>
         </div>
@@ -1729,7 +1738,7 @@
     </div>
 
     <!-- Substack -->
-    <div class="contact-method-pro fade-in">
+    <div class="contact-method-pro fade-in clickable-card" data-link="https://substack.com/@divyasbisen">
         <div class="method-icon-wrapper">
             <div class="contact-icon">📰</div>
         </div>
@@ -1747,7 +1756,7 @@
     </div>
 
     <!-- Medium -->
-    <div class="contact-method-pro fade-in">
+    <div class="contact-method-pro fade-in clickable-card" data-link="https://medium.com/@divyasaur2007">
         <div class="method-icon-wrapper">
             <div class="contact-icon">✍️</div>
         </div>
@@ -1881,6 +1890,14 @@
 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
+        });
+        document.querySelectorAll('.clickable-card').forEach(card => {
+            card.addEventListener('click', () => {
+            const link = card.getAttribute('data-link');
+            if (link) {
+                window.open(link, '_blank');
+            }
+            });
         });
     </script>
 </body>
